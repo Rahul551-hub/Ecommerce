@@ -25,7 +25,7 @@ namespace Ecommerce.Data
                 .HasOne(my => my.user)
                 .WithMany(u => u.UserRoles) 
                 .HasForeignKey(my => my.UserId);
-
+             
             modelBuilder.Entity<UserRole>()
               .HasOne(my => my.Role)
               .WithMany(u => u.UserRoles)
